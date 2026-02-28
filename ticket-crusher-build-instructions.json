@@ -1,0 +1,264 @@
+{
+  "name": "TicketCrusherTicketCrusher-macOS",
+  "version": "1.0",
+  "goal": "Design and implement a macOS-native Ticket Crusher that helps Ticket Crusher support technicians and end-users triage issues, answer how-to questions from internal guides, and (optionally) look up managed-device context from local exports. Build from local project artifacts; do not require internet access to function for core KB answering.",
+  "project_artifacts": {
+    "assistant_workflow_rules": {
+      "path": "/mnt/data/cw-support-instructions.json",
+      "use_as": "Authoritative workflow contract for ticket detection, required intake fields, and response formatting."
+    },
+    "knowledge_base_bundle": {
+      "path": "/mnt/data/Support-Files.zip",
+      "contains": "Many JSON support articles/playbooks used as the bot's internal KB."
+    },
+    "asset_and_device_exports": [
+      {
+        "path": "/mnt/data/410 Computers in _Managed Macs.csv",
+        "use_as": "Mac inventory lookup (name, serial, last user, OS version, username)."
+      },
+      {
+        "path": "/mnt/data/5745 Mobile Devices in All Managed Devices.csv",
+        "use_as": "Mobile inventory lookup (model, OS version, serial, user, phone number, carrier)."
+      },
+      {
+        "path": "/mnt/data/assets.csv",
+        "use_as": "General asset inventory lookup (user, dept, product, state, asset tag, type/category)."
+      },
+      {
+        "path": "/mnt/data/Apple Intake.xlsx",
+        "use_as": "Apple intake and logistics dataset (intake, redeploy, Apple TV, risk/shipping, tickets)."
+      }
+    ],
+    "service_desk_reference": {
+      "path": "/mnt/data/ServiceDeskPlus.zip",
+      "use_as": "UI/flow hints and terminology; do not hardcode endpoints/credentials."
+    }
+  },
+  "architecture_overview": {
+    "app_type": "macOS app (Swift/SwiftUI) with an embedded local inference option and/or remote LLM option via pluggable provider interface.",
+    "core_principles": [
+      "Local-first: KB and search work offline.",
+      "Deterministic workflows: follow cw-support-instructions.json for intake and response structure.",
+      "Pluggable integrations: Jamf/ServiceDeskPlus/APIs behind interfaces; no secrets in repo.",
+      "Auditable outputs: every answer can show its source article(s) and/or dataset record(s).",
+      "Fast iteration: treat KB bundle and CSV/XLSX exports as replaceable data packs."
+    ],
+    "high_level_modules": [
+      "UI Layer (SwiftUI)",
+      "Conversation Orchestrator",
+      "Ticket/Intake Engine",
+      "Knowledge Base (KB) Index + Retrieval",
+      "Device/Asset Lookup Service",
+      "Action/Playbook Executor (guided steps, scripts, links)",
+      "Integrations Layer (optional): Jamf, ServiceDeskPlus",
+      "Logging/Telemetry (local; optional export)"
+    ]
+  },
+  "user_experiences": {
+    "modes": [
+      {
+        "id": "triage_chat",
+        "description": "Chat-driven triage for technicians/end-users; enforces required intake fields and provides step-by-step troubleshooting plus possible causes."
+      },
+      {
+        "id": "kb_search",
+        "description": "Search internal support articles and view the canonical procedure JSON formatted nicely."
+      },
+      {
+        "id": "asset_lookup",
+        "description": "Search by serial, asset tag, username, device name; show matching records and suggest relevant KB articles."
+      },
+      {
+        "id": "ticket_helper",
+        "description": "When user starts message with '##<ticket_number>', initiate ticket workflow and produce a clean response + a separate 'possible causes' section."
+      }
+    ],
+    "ui_screens": [
+      "Home: Mode picker + recent conversations",
+      "Chat: conversation + intake panel + source citations",
+      "KB Library: article list + filters + viewer",
+      "Asset/Device Lookup: search + record details + related-articles suggestions",
+      "Settings: data pack paths, LLM provider selection, privacy controls",
+      "Exports: copyable incident/ticket notes, JSON export of conversation summary"
+    ]
+  },
+  "data_pipeline": {
+    "kb_ingestion": {
+      "input": "/mnt/data/Support-Files.zip",
+      "steps": [
+        "Unzip to app-managed directory (Application Support).",
+        "Parse each JSON article into a normalized schema: {id, title, body_steps, tags, platforms, apps, keywords, original_path}.",
+        "Create search index for: title, keywords, steps text, tags.",
+        "Persist index to SQLite (FTS) for fast offline search."
+      ],
+      "normalization_rules": [
+        "Preserve step order exactly as authored.",
+        "Extract platform hints from filenames and/or content (macOS/iOS/iPadOS/Windows/etc).",
+        "Extract app names when obvious (Outlook, Teams, GlobalProtect, Horizon, etc.).",
+        "Derive tags from filename tokens + common phrases."
+      ]
+    },
+    "inventory_ingestion": {
+      "inputs": [
+        "/mnt/data/410 Computers in _Managed Macs.csv",
+        "/mnt/data/5745 Mobile Devices in All Managed Devices.csv",
+        "/mnt/data/assets.csv",
+        "/mnt/data/Apple Intake.xlsx"
+      ],
+      "steps": [
+        "On first run and on-demand: import into SQLite tables.",
+        "Create indexes on serial number, username, display name, asset tag.",
+        "Store file hash + modified time; re-import only when changed."
+      ],
+      "record_linking": [
+        "Link by Serial Number across datasets where possible.",
+        "Link by Username / Full Name when serial missing.",
+        "Expose 'confidence score' for matches."
+      ]
+    }
+  },
+  "core_logic": {
+    "ticket_detection_and_intake": {
+      "source_of_truth": "/mnt/data/cw-support-instructions.json",
+      "rules": [
+        "If user message begins with '##' followed by a ticket number, start support-ticket workflow.",
+        "Treat lines prefixed with '//' as authoritative user annotations.",
+        "Always identify device type and confirm it's Apple hardware before Apple-specific troubleshooting.",
+        "Required details: device_type, serial_number, issue_description, app_in_use_at_time_of_issue, wifi_ssid_connected_to.",
+        "If any required detail is missing or vague, ask targeted follow-ups before proposing fixes."
+      ],
+      "implementation": {
+        "parser": [
+          "Regex for ticket header: ^##\\s*(\\w+)",
+          "Extract inline key-values when provided (Serial:, OS:, App:, SSID:).",
+          "Extract user annotations: lines starting with '//' (strip prefix, attach to context)."
+        ],
+        "intake_state_machine": [
+          "State: UnknownDevice -> Ask device type/model",
+          "State: MissingSerial -> Ask serial / best identifier",
+          "State: MissingIssue -> Ask clear problem statement + error text",
+          "State: MissingAppOrSSID -> Ask app in use + Wi-Fi SSID",
+          "State: Ready -> Generate step-by-step troubleshooting + possible causes"
+        ]
+      }
+    },
+    "retrieval_and_answering": {
+      "retrieval_strategy": [
+        "Primary: lexical search (SQLite FTS) over KB articles.",
+        "Secondary: optional embedding index (CoreML or local embedding model) to improve semantic matches.",
+        "Re-rank by platform match (macOS preferred), app match, and recency/priority tags if present."
+      ],
+      "answer_composition": [
+        "Always output ordered steps first (clear numbered actions).",
+        "Then output a separate section: 'Possible causes' (bulleted).",
+        "If applicable, include a short 'What I need from you' block when intake incomplete.",
+        "Show sources: list the KB article titles/paths that informed the answer."
+      ],
+      "guardrails": [
+        "Do not invent internal policies or procedures: if not in KB, say it's not in KB and suggest escalation path.",
+        "Do not fabricate device records: only show what exists in imported datasets.",
+        "Prefer native macOS steps (System Settings, Keychain Access, Network settings) and avoid unnecessary third-party tooling."
+      ]
+    },
+    "device_and_asset_lookup": {
+      "supported_queries": [
+        "Serial number (exact)",
+        "Computer name / Display name (partial)",
+        "Username / Full Name (partial)",
+        "Asset tag (exact/partial)",
+        "Phone number (exact, if present)"
+      ],
+      "outputs": [
+        "Matched records (with dataset source indicated).",
+        "Derived device context: model type, OS version, last user.",
+        "Suggested KB articles based on OS/app keywords."
+      ]
+    }
+  },
+  "macOS_implementation_details": {
+    "language_stack": "Swift 5.9+, SwiftUI, Combine/async-await, SQLite (via GRDB or SQLite.swift).",
+    "storage_locations": [
+      "Application Support/<bundle-id>/kb/",
+      "Application Support/<bundle-id>/db/ticketcrusher.sqlite",
+      "Application Support/<bundle-id>/logs/"
+    ],
+    "permissions_and_security": [
+      "No admin privileges required.",
+      "No keystroke/screen recording permissions.",
+      "If adding diagnostics collection, make it explicit and opt-in.",
+      "Secrets (API keys) stored in Keychain; never in plain text or repo."
+    ],
+    "optional_llm_providers": {
+      "interface": "LLMProvider protocol: generate(prompt, context) -> response",
+      "implementations": [
+        "Local: small on-device model (if feasible) for summarization and drafting; still rely on KB steps for correctness.",
+        "Remote: configurable endpoint (self-hosted/Azure/etc.) but keep offline KB retrieval as the source of truth."
+      ],
+      "prompting_rules": [
+        "System prompt enforces: follow intake rules, cite KB sources, do not hallucinate.",
+        "Tool/function calling for: KB search, device lookup, ticket parsing."
+      ]
+    }
+  },
+  "integrations_optional": {
+    "jamf": {
+      "goal": "Fetch live hardware/inventory details by serial and show Hardware Tab-style fields.",
+      "design": [
+        "JamfClient interface with methods: lookupComputer(serial), lookupMobileDevice(serial).",
+        "Config-driven base URL and auth strategy (token).",
+        "Fail gracefully: if unavailable, fall back to local CSV exports."
+      ]
+    },
+    "servicedeskplus": {
+      "goal": "Create/update/search tickets and attach the bot's troubleshooting response.",
+      "design": [
+        "SDPClient interface with methods: getTicket(id), addNote(id, text), createTicket(payload).",
+        "Do not assume API availability; use ServiceDeskPlus.zip only as reference for terminology/flows."
+      ]
+    }
+  },
+  "testing_and_quality": {
+    "unit_tests": [
+      "Ticket regex parsing + annotation extraction",
+      "Intake state machine transitions",
+      "KB ingestion normalization and indexing",
+      "CSV/XLSX import and serial lookup correctness",
+      "Answer formatting compliance (steps first, causes second)"
+    ],
+    "ui_tests": [
+      "Chat flow with missing fields prompts correctly",
+      "KB search returns relevant results",
+      "Asset lookup shows correct dataset source and fields"
+    ],
+    "performance": [
+      "Cold start target: <2s with existing DB",
+      "KB search target: <150ms typical queries",
+      "Batch imports run in background task with progress UI"
+    ]
+  },
+  "deployment": {
+    "packaging": [
+      "Signed .app for internal distribution",
+      "Optional: PKG installer if desired",
+      "Data packs (Support-Files.zip + CSV/XLSX exports) can be updated independently"
+    ],
+    "update_strategy": [
+      "Replace KB zip and exports; app detects changes by hash/mtime and re-imports.",
+      "Maintain schema migrations for SQLite DB."
+    ]
+  },
+  "deliverables": {
+    "produce": [
+      "A SwiftUI macOS app scaffold with module boundaries matching this JSON.",
+      "A SQLite schema + migrations + importers for KB + CSV + XLSX.",
+      "A deterministic ticket/intake workflow exactly matching cw-support-instructions.json.",
+      "A retrieval layer that returns KB sources and supports citations in the UI.",
+      "A clean export function that produces a ticket-ready summary (steps + causes + requested info)."
+    ],
+    "do_not_do": [
+      "Do not hardcode any Ticket Crusher credentials or endpoints.",
+      "Do not fabricate KB procedures; only use ingested articles.",
+      "Do not require network access for core features."
+    ]
+  }
+}

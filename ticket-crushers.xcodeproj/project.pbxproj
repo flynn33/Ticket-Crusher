@@ -1,0 +1,1315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		074B1DEA5502DDB235F327B1 /* TicketCrusherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944ABE51A99CCEFBE7A2470A /* TicketCrusherCore.framework */; };
+		0FA7BF042A132BDC4E1A60B4 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226A62731FA02AF6D0A9897D /* Diagnostics.swift */; };
+		0FE61267313B91304FE3F7DE /* TicketCrusherStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2081861FAC7FEC93A43DE138 /* TicketCrusherStorage.framework */; };
+		1548CB1FCAB208CF0B93615A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F4D39399ADA0F868A19F3E /* Cocoa.framework */; };
+		18E6E6E8FD700FF17F326661 /* DataPackImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442DFE977B36676C83DD1B58 /* DataPackImporter.swift */; };
+		1F660C44D8A5BD4DCA186046 /* TicketCrusherCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 944ABE51A99CCEFBE7A2470A /* TicketCrusherCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		28F58422037D1BFAAFD7CAFE /* TicketCrusherFeatures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3BD1568AAF81E04B0C37BD /* TicketCrusherFeatures.framework */; };
+		29270424E131CBBB428DADB3 /* FileFingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8C4B31B472342FA0A3960A /* FileFingerprint.swift */; };
+		370E0A532F7293DA86AE334F /* SQLiteRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F8629FA54C52783CADD84 /* SQLiteRepositories.swift */; };
+		40143BDDC128687C03ED5CFD /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63911084791A89D47B7C5F95 /* SQLiteDatabase.swift */; };
+		4481CEEFF07FB8B8510B3267 /* TicketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED4F9262C6D83414235970 /* TicketParser.swift */; };
+		4CACDAFF8E5BFE5913F14E96 /* TicketCrusherFeatures.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF3BD1568AAF81E04B0C37BD /* TicketCrusherFeatures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		517A46D0F05C8F5C3EC14E1C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F4D39399ADA0F868A19F3E /* Cocoa.framework */; };
+		5A7957D508AD719A5ACDD5A9 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F75302672D1FCC4076A237 /* Views.swift */; };
+		63D8AD72C2C44BB3908DBA78 /* TicketCrusherIntegrations.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C6B4C01090C3E3E01C7E44 /* TicketCrusherIntegrations.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65BB499B9D29D81A8837F0BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F4D39399ADA0F868A19F3E /* Cocoa.framework */; };
+		695F2104F53E833692B187DC /* TicketCrusherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944ABE51A99CCEFBE7A2470A /* TicketCrusherCore.framework */; };
+		6CC741DD00B3C4DAE0E6ECC5 /* TicketCrusherFeatures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3BD1568AAF81E04B0C37BD /* TicketCrusherFeatures.framework */; };
+		6FD9CE5D1A46EBA5427AB269 /* TicketCrusherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944ABE51A99CCEFBE7A2470A /* TicketCrusherCore.framework */; };
+		7A91637BF2B32FB894FA93D7 /* ArticleNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61192A7033F94D0A151CFB /* ArticleNormalizer.swift */; };
+		84667A293C98D888C97D41ED /* DatabaseMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F151BD2B2E7B2DC86499674A /* DatabaseMigrator.swift */; };
+		92C245FAC85C7B070B513563 /* TicketCrusherStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2081861FAC7FEC93A43DE138 /* TicketCrusherStorage.framework */; };
+		995D6B14C3E2158FB585B9F8 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DEFFF9D7F8AEFA8846AE93 /* AppViewModel.swift */; };
+		9EC32B2E718C669DEA0A642F /* IntakeStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309B3D9280FD12F67E5221B9 /* IntakeStateMachine.swift */; };
+		A0B73B746F02A4C71E92AED2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF71F669103C74C2232B1BAB /* Models.swift */; };
+		A54C5340B413A66AE6F579A0 /* DocumentTextExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC467BDCED6AEF0B6680D31 /* DocumentTextExtractor.swift */; };
+		A63B6F521EDB70264D181D15 /* TicketCrusherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944ABE51A99CCEFBE7A2470A /* TicketCrusherCore.framework */; };
+		AA5FD1517C7DFE8D92991717 /* TicketCrusherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944ABE51A99CCEFBE7A2470A /* TicketCrusherCore.framework */; };
+		AD61365D8D05E2E820341E8A /* ticket_crusher_branding.png in Resources */ = {isa = PBXBuildFile; fileRef = A263EEC14B1BB90A3F1D77E3 /* ticket_crusher_branding.png */; };
+		AEF4C135AC09FA9F03B98C83 /* ticket_crusher_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ABFBDEC84DE4752EA9F27C31 /* ticket_crusher_icon.png */; };
+		AFAE33EB633A41509B97B3BF /* IntegrationStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37715D733AB34880BCC8D92B /* IntegrationStubs.swift */; };
+		B2BB63650E888D36F3735D1E /* TicketExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DB28DFAA0B52776599869 /* TicketExportService.swift */; };
+		B5FB1BF57CB3D1425807E397 /* StorageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C973ABB919CD89B7B388654 /* StorageContainer.swift */; };
+		C25D7C400872726A53335155 /* TicketCrusherStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2081861FAC7FEC93A43DE138 /* TicketCrusherStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C2F08D4048F05F80DE8BE8C8 /* TicketCrusherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B39F0DDBDA8A184EB7E83 /* TicketCrusherApp.swift */; };
+		C3A902AAE0B7B0982510EDF7 /* ResponseComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2CA399FD36A7F857566DA1 /* ResponseComposer.swift */; };
+		C8FA3E65B5224C239A16B4C9 /* TicketCrusherIntegrations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C6B4C01090C3E3E01C7E44 /* TicketCrusherIntegrations.framework */; };
+		C9310EBA138BDCC022E721FD /* ConversationOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12DD1924BA638E8138000B5 /* ConversationOrchestrator.swift */; };
+		D45BC6825A320A9479BF18C0 /* AppBrandingAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283CEF2EC8998467FCCFBA6 /* AppBrandingAssets.swift */; };
+		D4A1245224CFA52AE8EAA0EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F4D39399ADA0F868A19F3E /* Cocoa.framework */; };
+		D7067733A8930B3E08924E26 /* DelimitedReaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A18D073171EAAB88CDF2C1 /* DelimitedReaders.swift */; };
+		D8D652C04D54623F1908673B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F4D39399ADA0F868A19F3E /* Cocoa.framework */; };
+		D9D39DC7F51785129F93327E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714984D3CDBC43A992372BA1 /* Protocols.swift */; };
+		DA80D4EA68CE4DF7B622E81C /* WorkflowPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A408B53F8B32F13D384F27F /* WorkflowPolicy.swift */; };
+		E595FF00CA4A3F3A7F5D67F3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A03CC6D5CAEE8941E491E /* main.swift */; };
+		E8D4FE2E4BD01472D54C026B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A68E2ABF8176D5DFE5F5548A /* libsqlite3.tbd */; };
+		EF47FE89E50E0F4869AD9618 /* SQLiteDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FBBA761E64A1D03156F7AB /* SQLiteDiagnostics.swift */; };
+		F3739FB912CBDEED34A98CA4 /* KnowledgeRetrievalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A085995A9F56B718B30EA853 /* KnowledgeRetrievalService.swift */; };
+		FAB894272F86D23B0F801C1F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F4D39399ADA0F868A19F3E /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00EA7D3BD08042A57D8F28F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F95E1B275CE33083F549F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F540F69F0111E22D9CF8FDEF;
+			remoteInfo = TicketCrusherFeatures;
+		};
+		097B4620D1B5487AEB4EFE8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F95E1B275CE33083F549F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F540F69F0111E22D9CF8FDEF;
+			remoteInfo = TicketCrusherFeatures;
+		};
+		30393BDE24A225A463AB53A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F95E1B275CE33083F549F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED660C9693CB62E03EFF8DEA;
+			remoteInfo = TicketCrusherCore;
+		};
+		737F2D61D349512FBC334E48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F95E1B275CE33083F549F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED660C9693CB62E03EFF8DEA;
+			remoteInfo = TicketCrusherCore;
+		};
+		8746CB332A418F103EC3975D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F95E1B275CE33083F549F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED95E2063419E11B40CB4909;
+			remoteInfo = TicketCrusherStorage;
+		};
+		8F64E9AF33102B0D44F8D279 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F95E1B275CE33083F549F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED660C9693CB62E03EFF8DEA;
+			remoteInfo = TicketCrusherCore;
+		};
+		A0F0C19A81A426FBC2AE5564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F95E1B275CE33083F549F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED660C9693CB62E03EFF8DEA;
+			remoteInfo = TicketCrusherCore;
+		};
+		AEAAC605BE47B14806F80786 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F95E1B275CE33083F549F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED660C9693CB62E03EFF8DEA;
+			remoteInfo = TicketCrusherCore;
+		};
+		C6BA861FDFA0922E6A48AB44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F95E1B275CE33083F549F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED95E2063419E11B40CB4909;
+			remoteInfo = TicketCrusherStorage;
+		};
+		FB7D5CF3E5927086457BF492 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F95E1B275CE33083F549F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D3A3683501AE70E4F23567;
+			remoteInfo = TicketCrusherIntegrations;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB35376EE6A3334614663998 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1F660C44D8A5BD4DCA186046 /* TicketCrusherCore.framework in Embed Frameworks */,
+				C25D7C400872726A53335155 /* TicketCrusherStorage.framework in Embed Frameworks */,
+				4CACDAFF8E5BFE5913F14E96 /* TicketCrusherFeatures.framework in Embed Frameworks */,
+				63D8AD72C2C44BB3908DBA78 /* TicketCrusherIntegrations.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01C6B4C01090C3E3E01C7E44 /* TicketCrusherIntegrations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TicketCrusherIntegrations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D9F8629FA54C52783CADD84 /* SQLiteRepositories.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLiteRepositories.swift; path = Sources/TicketCrusherStorage/SQLiteRepositories.swift; sourceTree = "<group>"; };
+		140A03CC6D5CAEE8941E491E /* main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/TicketCrusherChecks/main.swift; sourceTree = "<group>"; };
+		16FBBA761E64A1D03156F7AB /* SQLiteDiagnostics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLiteDiagnostics.swift; path = Sources/TicketCrusherStorage/SQLiteDiagnostics.swift; sourceTree = "<group>"; };
+		2081861FAC7FEC93A43DE138 /* TicketCrusherStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TicketCrusherStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F75302672D1FCC4076A237 /* Views.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Views.swift; path = Sources/TicketCrusherApp/Views.swift; sourceTree = "<group>"; };
+		226A62731FA02AF6D0A9897D /* Diagnostics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diagnostics.swift; path = Sources/TicketCrusherCore/Diagnostics.swift; sourceTree = "<group>"; };
+		25DEFFF9D7F8AEFA8846AE93 /* AppViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppViewModel.swift; path = Sources/TicketCrusherApp/AppViewModel.swift; sourceTree = "<group>"; };
+		309B3D9280FD12F67E5221B9 /* IntakeStateMachine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntakeStateMachine.swift; path = Sources/TicketCrusherFeatures/IntakeStateMachine.swift; sourceTree = "<group>"; };
+		37715D733AB34880BCC8D92B /* IntegrationStubs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegrationStubs.swift; path = Sources/TicketCrusherIntegrations/IntegrationStubs.swift; sourceTree = "<group>"; };
+		3D2CA399FD36A7F857566DA1 /* ResponseComposer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseComposer.swift; path = Sources/TicketCrusherFeatures/ResponseComposer.swift; sourceTree = "<group>"; };
+		3EC467BDCED6AEF0B6680D31 /* DocumentTextExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DocumentTextExtractor.swift; path = Sources/TicketCrusherStorage/DocumentTextExtractor.swift; sourceTree = "<group>"; };
+		442DFE977B36676C83DD1B58 /* DataPackImporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataPackImporter.swift; path = Sources/TicketCrusherStorage/DataPackImporter.swift; sourceTree = "<group>"; };
+		44ED4F9262C6D83414235970 /* TicketParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TicketParser.swift; path = Sources/TicketCrusherFeatures/TicketParser.swift; sourceTree = "<group>"; };
+		491DB28DFAA0B52776599869 /* TicketExportService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TicketExportService.swift; path = Sources/TicketCrusherFeatures/TicketExportService.swift; sourceTree = "<group>"; };
+		4C973ABB919CD89B7B388654 /* StorageContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StorageContainer.swift; path = Sources/TicketCrusherStorage/StorageContainer.swift; sourceTree = "<group>"; };
+		4D3B39F0DDBDA8A184EB7E83 /* TicketCrusherApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TicketCrusherApp.swift; path = Sources/TicketCrusherApp/TicketCrusherApp.swift; sourceTree = "<group>"; };
+		63911084791A89D47B7C5F95 /* SQLiteDatabase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLiteDatabase.swift; path = Sources/TicketCrusherStorage/SQLiteDatabase.swift; sourceTree = "<group>"; };
+		69A18D073171EAAB88CDF2C1 /* DelimitedReaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelimitedReaders.swift; path = Sources/TicketCrusherStorage/DelimitedReaders.swift; sourceTree = "<group>"; };
+		714984D3CDBC43A992372BA1 /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Sources/TicketCrusherCore/Protocols.swift; sourceTree = "<group>"; };
+		7A408B53F8B32F13D384F27F /* WorkflowPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WorkflowPolicy.swift; path = Sources/TicketCrusherCore/WorkflowPolicy.swift; sourceTree = "<group>"; };
+		944ABE51A99CCEFBE7A2470A /* TicketCrusherCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TicketCrusherCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A085995A9F56B718B30EA853 /* KnowledgeRetrievalService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KnowledgeRetrievalService.swift; path = Sources/TicketCrusherFeatures/KnowledgeRetrievalService.swift; sourceTree = "<group>"; };
+		A263EEC14B1BB90A3F1D77E3 /* ticket_crusher_branding.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ticket_crusher_branding.png; path = Sources/TicketCrusherApp/Resources/ticket_crusher_branding.png; sourceTree = "<group>"; };
+		A68E2ABF8176D5DFE5F5548A /* libsqlite3.tbd */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A7F1A29C126E7886456E1BCE /* TicketCrusherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketCrusherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA8C4B31B472342FA0A3960A /* FileFingerprint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileFingerprint.swift; path = Sources/TicketCrusherStorage/FileFingerprint.swift; sourceTree = "<group>"; };
+		ABFBDEC84DE4752EA9F27C31 /* ticket_crusher_icon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ticket_crusher_icon.png; path = Sources/TicketCrusherApp/Resources/ticket_crusher_icon.png; sourceTree = "<group>"; };
+		AE61192A7033F94D0A151CFB /* ArticleNormalizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArticleNormalizer.swift; path = Sources/TicketCrusherStorage/ArticleNormalizer.swift; sourceTree = "<group>"; };
+		B46649BB766F06F57132047E /* TicketCrusherChecks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TicketCrusherChecks; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1F4D39399ADA0F868A19F3E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		DF3BD1568AAF81E04B0C37BD /* TicketCrusherFeatures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TicketCrusherFeatures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF71F669103C74C2232B1BAB /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Models.swift; path = Sources/TicketCrusherCore/Models.swift; sourceTree = "<group>"; };
+		F12DD1924BA638E8138000B5 /* ConversationOrchestrator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConversationOrchestrator.swift; path = Sources/TicketCrusherFeatures/ConversationOrchestrator.swift; sourceTree = "<group>"; };
+		F151BD2B2E7B2DC86499674A /* DatabaseMigrator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseMigrator.swift; path = Sources/TicketCrusherStorage/DatabaseMigrator.swift; sourceTree = "<group>"; };
+		F283CEF2EC8998467FCCFBA6 /* AppBrandingAssets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppBrandingAssets.swift; path = Sources/TicketCrusherApp/AppBrandingAssets.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C279287C53F73350A3CE6B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB894272F86D23B0F801C1F /* Cocoa.framework in Frameworks */,
+				A63B6F521EDB70264D181D15 /* TicketCrusherCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370DA834FA6FC071643422F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65BB499B9D29D81A8837F0BE /* Cocoa.framework in Frameworks */,
+				6FD9CE5D1A46EBA5427AB269 /* TicketCrusherCore.framework in Frameworks */,
+				92C245FAC85C7B070B513563 /* TicketCrusherStorage.framework in Frameworks */,
+				28F58422037D1BFAAFD7CAFE /* TicketCrusherFeatures.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C5F12D7ABA38153B04A4540 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D652C04D54623F1908673B /* Cocoa.framework in Frameworks */,
+				AA5FD1517C7DFE8D92991717 /* TicketCrusherCore.framework in Frameworks */,
+				0FE61267313B91304FE3F7DE /* TicketCrusherStorage.framework in Frameworks */,
+				6CC741DD00B3C4DAE0E6ECC5 /* TicketCrusherFeatures.framework in Frameworks */,
+				C8FA3E65B5224C239A16B4C9 /* TicketCrusherIntegrations.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9992455AD707F5CE8DC7AA1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517A46D0F05C8F5C3EC14E1C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65E2A39451AAD24B458EF5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A1245224CFA52AE8EAA0EB /* Cocoa.framework in Frameworks */,
+				695F2104F53E833692B187DC /* TicketCrusherCore.framework in Frameworks */,
+				E8D4FE2E4BD01472D54C026B /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBF0ADE8E711AE9C8D82E34E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1548CB1FCAB208CF0B93615A /* Cocoa.framework in Frameworks */,
+				074B1DEA5502DDB235F327B1 /* TicketCrusherCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09E9AC93286AEFB1D4E51812 /* TicketCrusherCore */ = {
+			isa = PBXGroup;
+			children = (
+				226A62731FA02AF6D0A9897D /* Diagnostics.swift */,
+				DF71F669103C74C2232B1BAB /* Models.swift */,
+				714984D3CDBC43A992372BA1 /* Protocols.swift */,
+				7A408B53F8B32F13D384F27F /* WorkflowPolicy.swift */,
+			);
+			name = TicketCrusherCore;
+			sourceTree = "<group>";
+		};
+		19EFD093A46203B360B51331 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				09E9AC93286AEFB1D4E51812 /* TicketCrusherCore */,
+				88E86094018BA42B64F8632B /* TicketCrusherStorage */,
+				39329213D29848601AECDBF4 /* TicketCrusherFeatures */,
+				758C790178F181B6873C64B0 /* TicketCrusherIntegrations */,
+				87CC5F7614DF6D59623FB139 /* TicketCrusherApp */,
+				B99DCA476798E0DA519D6C58 /* TicketCrusherChecks */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		39329213D29848601AECDBF4 /* TicketCrusherFeatures */ = {
+			isa = PBXGroup;
+			children = (
+				F12DD1924BA638E8138000B5 /* ConversationOrchestrator.swift */,
+				309B3D9280FD12F67E5221B9 /* IntakeStateMachine.swift */,
+				A085995A9F56B718B30EA853 /* KnowledgeRetrievalService.swift */,
+				3D2CA399FD36A7F857566DA1 /* ResponseComposer.swift */,
+				491DB28DFAA0B52776599869 /* TicketExportService.swift */,
+				44ED4F9262C6D83414235970 /* TicketParser.swift */,
+			);
+			name = TicketCrusherFeatures;
+			sourceTree = "<group>";
+		};
+		3FC83693BE5547CA21350764 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD9F170E67BE929A236AAB99 /* OS X */,
+				A68E2ABF8176D5DFE5F5548A /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		442DF86CB42E317A7936D5B5 = {
+			isa = PBXGroup;
+			children = (
+				B3166471605C81C4F17B8309 /* Products */,
+				3FC83693BE5547CA21350764 /* Frameworks */,
+				19EFD093A46203B360B51331 /* Sources */,
+			);
+			sourceTree = "<group>";
+		};
+		6F7EF056120C48600F710171 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A263EEC14B1BB90A3F1D77E3 /* ticket_crusher_branding.png */,
+				ABFBDEC84DE4752EA9F27C31 /* ticket_crusher_icon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		758C790178F181B6873C64B0 /* TicketCrusherIntegrations */ = {
+			isa = PBXGroup;
+			children = (
+				37715D733AB34880BCC8D92B /* IntegrationStubs.swift */,
+			);
+			name = TicketCrusherIntegrations;
+			sourceTree = "<group>";
+		};
+		87CC5F7614DF6D59623FB139 /* TicketCrusherApp */ = {
+			isa = PBXGroup;
+			children = (
+				F283CEF2EC8998467FCCFBA6 /* AppBrandingAssets.swift */,
+				25DEFFF9D7F8AEFA8846AE93 /* AppViewModel.swift */,
+				4D3B39F0DDBDA8A184EB7E83 /* TicketCrusherApp.swift */,
+				20F75302672D1FCC4076A237 /* Views.swift */,
+				6F7EF056120C48600F710171 /* Resources */,
+			);
+			name = TicketCrusherApp;
+			sourceTree = "<group>";
+		};
+		88E86094018BA42B64F8632B /* TicketCrusherStorage */ = {
+			isa = PBXGroup;
+			children = (
+				AE61192A7033F94D0A151CFB /* ArticleNormalizer.swift */,
+				442DFE977B36676C83DD1B58 /* DataPackImporter.swift */,
+				F151BD2B2E7B2DC86499674A /* DatabaseMigrator.swift */,
+				69A18D073171EAAB88CDF2C1 /* DelimitedReaders.swift */,
+				3EC467BDCED6AEF0B6680D31 /* DocumentTextExtractor.swift */,
+				AA8C4B31B472342FA0A3960A /* FileFingerprint.swift */,
+				63911084791A89D47B7C5F95 /* SQLiteDatabase.swift */,
+				16FBBA761E64A1D03156F7AB /* SQLiteDiagnostics.swift */,
+				0D9F8629FA54C52783CADD84 /* SQLiteRepositories.swift */,
+				4C973ABB919CD89B7B388654 /* StorageContainer.swift */,
+			);
+			name = TicketCrusherStorage;
+			sourceTree = "<group>";
+		};
+		B3166471605C81C4F17B8309 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				944ABE51A99CCEFBE7A2470A /* TicketCrusherCore.framework */,
+				2081861FAC7FEC93A43DE138 /* TicketCrusherStorage.framework */,
+				DF3BD1568AAF81E04B0C37BD /* TicketCrusherFeatures.framework */,
+				01C6B4C01090C3E3E01C7E44 /* TicketCrusherIntegrations.framework */,
+				B46649BB766F06F57132047E /* TicketCrusherChecks */,
+				A7F1A29C126E7886456E1BCE /* TicketCrusherApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B99DCA476798E0DA519D6C58 /* TicketCrusherChecks */ = {
+			isa = PBXGroup;
+			children = (
+				140A03CC6D5CAEE8941E491E /* main.swift */,
+			);
+			name = TicketCrusherChecks;
+			sourceTree = "<group>";
+		};
+		BD9F170E67BE929A236AAB99 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				D1F4D39399ADA0F868A19F3E /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		081C3E55D23BCE8DEC1199B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B91643D9742F3F0CBBE4C5F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48F7C271956F60B5C363499B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFDA08B2DF7A86E0E5CA2D1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A11A50339BD753A55F75EF5 /* TicketCrusherApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22FB174E73E4D295996338FC /* Build configuration list for PBXNativeTarget "TicketCrusherApp" */;
+			buildPhases = (
+				59BA25D38EAD0D0A652A2E32 /* Sources */,
+				5C5F12D7ABA38153B04A4540 /* Frameworks */,
+				0FB5C2D6D546B800F5902009 /* Resources */,
+				CB35376EE6A3334614663998 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48B361237CC95360B87CBBBA /* PBXTargetDependency */,
+				C0C69A2C54E0C50C11E593D0 /* PBXTargetDependency */,
+				6B06026A9526BA5A856CA87E /* PBXTargetDependency */,
+				A87DC41359E0BCDF96DC055F /* PBXTargetDependency */,
+			);
+			name = TicketCrusherApp;
+			productName = TicketCrusherApp;
+			productReference = A7F1A29C126E7886456E1BCE /* TicketCrusherApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F829E4F89D3599A14B92FD3 /* TicketCrusherChecks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01CACEADF5B54959288EF6FB /* Build configuration list for PBXNativeTarget "TicketCrusherChecks" */;
+			buildPhases = (
+				C43471B439E9940C9C19D0F8 /* Sources */,
+				370DA834FA6FC071643422F8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95CAE28694292442C53EB965 /* PBXTargetDependency */,
+				E07B580B34E61289117EC28F /* PBXTargetDependency */,
+				708ED1B5C7261B4817A9A504 /* PBXTargetDependency */,
+			);
+			name = TicketCrusherChecks;
+			productName = TicketCrusherChecks;
+			productReference = B46649BB766F06F57132047E /* TicketCrusherChecks */;
+			productType = "com.apple.product-type.tool";
+		};
+		D0D3A3683501AE70E4F23567 /* TicketCrusherIntegrations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB3D5D69D234B79001E3DAD /* Build configuration list for PBXNativeTarget "TicketCrusherIntegrations" */;
+			buildPhases = (
+				2B91643D9742F3F0CBBE4C5F /* Headers */,
+				F8CC9E209784539BF0DE9179 /* Sources */,
+				2C279287C53F73350A3CE6B2 /* Frameworks */,
+				224BA923BFF7E144D0E92C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88700F49A58757B053514D33 /* PBXTargetDependency */,
+			);
+			name = TicketCrusherIntegrations;
+			productName = TicketCrusherIntegrations;
+			productReference = 01C6B4C01090C3E3E01C7E44 /* TicketCrusherIntegrations.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ED660C9693CB62E03EFF8DEA /* TicketCrusherCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B93A2A2AC1EE5100D9D61B1 /* Build configuration list for PBXNativeTarget "TicketCrusherCore" */;
+			buildPhases = (
+				48F7C271956F60B5C363499B /* Headers */,
+				023502CACF3971758A5257BD /* Sources */,
+				9992455AD707F5CE8DC7AA1A /* Frameworks */,
+				9AE12E5E155AECD4F148BA29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TicketCrusherCore;
+			productName = TicketCrusherCore;
+			productReference = 944ABE51A99CCEFBE7A2470A /* TicketCrusherCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ED95E2063419E11B40CB4909 /* TicketCrusherStorage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29D925AD6A1382E178E8D699 /* Build configuration list for PBXNativeTarget "TicketCrusherStorage" */;
+			buildPhases = (
+				081C3E55D23BCE8DEC1199B1 /* Headers */,
+				F317759939351A6B7783FFF3 /* Sources */,
+				E65E2A39451AAD24B458EF5B /* Frameworks */,
+				9FEA86634E1625189A778349 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB028C5EF198D38CFCB02C11 /* PBXTargetDependency */,
+			);
+			name = TicketCrusherStorage;
+			productName = TicketCrusherStorage;
+			productReference = 2081861FAC7FEC93A43DE138 /* TicketCrusherStorage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F540F69F0111E22D9CF8FDEF /* TicketCrusherFeatures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E46C260A0E905EDCBA1A248D /* Build configuration list for PBXNativeTarget "TicketCrusherFeatures" */;
+			buildPhases = (
+				EEFDA08B2DF7A86E0E5CA2D1 /* Headers */,
+				BFD0D7E8429E41B003E4E60E /* Sources */,
+				FBF0ADE8E711AE9C8D82E34E /* Frameworks */,
+				91CE0095D4272EC69325F039 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B1FC0BBA6ADFA50A1B0E75A /* PBXTargetDependency */,
+			);
+			name = TicketCrusherFeatures;
+			productName = TicketCrusherFeatures;
+			productReference = DF3BD1568AAF81E04B0C37BD /* TicketCrusherFeatures.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F95E1B275CE33083F549F69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 2620;
+			};
+			buildConfigurationList = 34EF09C5151361E39EAA07D3 /* Build configuration list for PBXProject "ticket-crushers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 442DF86CB42E317A7936D5B5;
+			productRefGroup = B3166471605C81C4F17B8309 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED660C9693CB62E03EFF8DEA /* TicketCrusherCore */,
+				ED95E2063419E11B40CB4909 /* TicketCrusherStorage */,
+				F540F69F0111E22D9CF8FDEF /* TicketCrusherFeatures */,
+				D0D3A3683501AE70E4F23567 /* TicketCrusherIntegrations */,
+				5F829E4F89D3599A14B92FD3 /* TicketCrusherChecks */,
+				0A11A50339BD753A55F75EF5 /* TicketCrusherApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0FB5C2D6D546B800F5902009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD61365D8D05E2E820341E8A /* ticket_crusher_branding.png in Resources */,
+				AEF4C135AC09FA9F03B98C83 /* ticket_crusher_icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224BA923BFF7E144D0E92C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91CE0095D4272EC69325F039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AE12E5E155AECD4F148BA29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FEA86634E1625189A778349 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		023502CACF3971758A5257BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA7BF042A132BDC4E1A60B4 /* Diagnostics.swift in Sources */,
+				A0B73B746F02A4C71E92AED2 /* Models.swift in Sources */,
+				D9D39DC7F51785129F93327E /* Protocols.swift in Sources */,
+				DA80D4EA68CE4DF7B622E81C /* WorkflowPolicy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59BA25D38EAD0D0A652A2E32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45BC6825A320A9479BF18C0 /* AppBrandingAssets.swift in Sources */,
+				995D6B14C3E2158FB585B9F8 /* AppViewModel.swift in Sources */,
+				C2F08D4048F05F80DE8BE8C8 /* TicketCrusherApp.swift in Sources */,
+				5A7957D508AD719A5ACDD5A9 /* Views.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD0D7E8429E41B003E4E60E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9310EBA138BDCC022E721FD /* ConversationOrchestrator.swift in Sources */,
+				9EC32B2E718C669DEA0A642F /* IntakeStateMachine.swift in Sources */,
+				F3739FB912CBDEED34A98CA4 /* KnowledgeRetrievalService.swift in Sources */,
+				C3A902AAE0B7B0982510EDF7 /* ResponseComposer.swift in Sources */,
+				B2BB63650E888D36F3735D1E /* TicketExportService.swift in Sources */,
+				4481CEEFF07FB8B8510B3267 /* TicketParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C43471B439E9940C9C19D0F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E595FF00CA4A3F3A7F5D67F3 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F317759939351A6B7783FFF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A91637BF2B32FB894FA93D7 /* ArticleNormalizer.swift in Sources */,
+				18E6E6E8FD700FF17F326661 /* DataPackImporter.swift in Sources */,
+				84667A293C98D888C97D41ED /* DatabaseMigrator.swift in Sources */,
+				D7067733A8930B3E08924E26 /* DelimitedReaders.swift in Sources */,
+				A54C5340B413A66AE6F579A0 /* DocumentTextExtractor.swift in Sources */,
+				29270424E131CBBB428DADB3 /* FileFingerprint.swift in Sources */,
+				40143BDDC128687C03ED5CFD /* SQLiteDatabase.swift in Sources */,
+				EF47FE89E50E0F4869AD9618 /* SQLiteDiagnostics.swift in Sources */,
+				370E0A532F7293DA86AE334F /* SQLiteRepositories.swift in Sources */,
+				B5FB1BF57CB3D1425807E397 /* StorageContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8CC9E209784539BF0DE9179 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFAE33EB633A41509B97B3BF /* IntegrationStubs.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48B361237CC95360B87CBBBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TicketCrusherCore;
+			target = ED660C9693CB62E03EFF8DEA /* TicketCrusherCore */;
+			targetProxy = A0F0C19A81A426FBC2AE5564 /* PBXContainerItemProxy */;
+		};
+		6B06026A9526BA5A856CA87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TicketCrusherFeatures;
+			target = F540F69F0111E22D9CF8FDEF /* TicketCrusherFeatures */;
+			targetProxy = 097B4620D1B5487AEB4EFE8F /* PBXContainerItemProxy */;
+		};
+		708ED1B5C7261B4817A9A504 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TicketCrusherFeatures;
+			target = F540F69F0111E22D9CF8FDEF /* TicketCrusherFeatures */;
+			targetProxy = 00EA7D3BD08042A57D8F28F0 /* PBXContainerItemProxy */;
+		};
+		7B1FC0BBA6ADFA50A1B0E75A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TicketCrusherCore;
+			target = ED660C9693CB62E03EFF8DEA /* TicketCrusherCore */;
+			targetProxy = 8F64E9AF33102B0D44F8D279 /* PBXContainerItemProxy */;
+		};
+		88700F49A58757B053514D33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TicketCrusherCore;
+			target = ED660C9693CB62E03EFF8DEA /* TicketCrusherCore */;
+			targetProxy = 30393BDE24A225A463AB53A1 /* PBXContainerItemProxy */;
+		};
+		95CAE28694292442C53EB965 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TicketCrusherCore;
+			target = ED660C9693CB62E03EFF8DEA /* TicketCrusherCore */;
+			targetProxy = 737F2D61D349512FBC334E48 /* PBXContainerItemProxy */;
+		};
+		A87DC41359E0BCDF96DC055F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TicketCrusherIntegrations;
+			target = D0D3A3683501AE70E4F23567 /* TicketCrusherIntegrations */;
+			targetProxy = FB7D5CF3E5927086457BF492 /* PBXContainerItemProxy */;
+		};
+		C0C69A2C54E0C50C11E593D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TicketCrusherStorage;
+			target = ED95E2063419E11B40CB4909 /* TicketCrusherStorage */;
+			targetProxy = 8746CB332A418F103EC3975D /* PBXContainerItemProxy */;
+		};
+		E07B580B34E61289117EC28F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TicketCrusherStorage;
+			target = ED95E2063419E11B40CB4909 /* TicketCrusherStorage */;
+			targetProxy = C6BA861FDFA0922E6A48AB44 /* PBXContainerItemProxy */;
+		};
+		FB028C5EF198D38CFCB02C11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TicketCrusherCore;
+			target = ED660C9693CB62E03EFF8DEA /* TicketCrusherCore */;
+			targetProxy = AEAAC605BE47B14806F80786 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0FDFE49C9DBF7C2B357367E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9AQ2C2838M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daleyjames.ticketcrusher;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2D6B30D1CA143F0AD66B4763 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimdaley.ticketcrusher.storage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5AD7E4C196446482F2334BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9AQ2C2838M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daleyjames.ticketcrusher;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5CC2AD9F1282C960D1ACB88C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimdaley.ticketcrusher.integrations;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		62737E033A36C0642AC694AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		62AF8EDE89A312D0BC89E693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimdaley.ticketcrusher.storage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7873F7E5E2EF61C5B23F0C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimdaley.ticketcrusher.features;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8342355B174466414DF6C8D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 9AQ2C2838M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ticket Crusher";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesdaley.ticketcrusher;
+				PRODUCT_NAME = TicketCrusherApp;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		999B877FC23DE6515EBE5B8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimdaley.ticketcrusher.checks;
+				PRODUCT_NAME = TicketCrusherChecks;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		9CE90F5FC5AE73406BCEBFD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A38C741F4AFF028AA74E46F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path",
+					"@loader_path",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimdaley.ticketcrusher.checks;
+				PRODUCT_NAME = TicketCrusherChecks;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		AEBF7C3395E109C361D41B43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimdaley.ticketcrusher.integrations;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B67A2E97A36732C34ECC86DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 9AQ2C2838M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ticket Crusher";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesdaley.ticketcrusher;
+				PRODUCT_NAME = TicketCrusherApp;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		DFC9E9A79479890ED28AA6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimdaley.ticketcrusher.features;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.9;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01CACEADF5B54959288EF6FB /* Build configuration list for PBXNativeTarget "TicketCrusherChecks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				999B877FC23DE6515EBE5B8A /* Release */,
+				A38C741F4AFF028AA74E46F0 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22FB174E73E4D295996338FC /* Build configuration list for PBXNativeTarget "TicketCrusherApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B67A2E97A36732C34ECC86DE /* Release */,
+				8342355B174466414DF6C8D6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29D925AD6A1382E178E8D699 /* Build configuration list for PBXNativeTarget "TicketCrusherStorage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D6B30D1CA143F0AD66B4763 /* Release */,
+				62AF8EDE89A312D0BC89E693 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34EF09C5151361E39EAA07D3 /* Build configuration list for PBXProject "ticket-crushers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CE90F5FC5AE73406BCEBFD2 /* Debug */,
+				62737E033A36C0642AC694AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FB3D5D69D234B79001E3DAD /* Build configuration list for PBXNativeTarget "TicketCrusherIntegrations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBF7C3395E109C361D41B43 /* Release */,
+				5CC2AD9F1282C960D1ACB88C /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B93A2A2AC1EE5100D9D61B1 /* Build configuration list for PBXNativeTarget "TicketCrusherCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD7E4C196446482F2334BAF /* Release */,
+				0FDFE49C9DBF7C2B357367E3 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E46C260A0E905EDCBA1A248D /* Build configuration list for PBXNativeTarget "TicketCrusherFeatures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFC9E9A79479890ED28AA6B7 /* Release */,
+				7873F7E5E2EF61C5B23F0C9A /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F95E1B275CE33083F549F69 /* Project object */;
+}
